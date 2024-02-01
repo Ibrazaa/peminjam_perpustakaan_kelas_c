@@ -25,7 +25,8 @@ class PeminjamanView extends GetView<PeminjamanController> {
           DataPinjam dataPinjam = state[index];
           return ListTile(
             title: Text("Peminjaman"),
-            subtitle:  Text("Buku : ${dataPinjam.book?.judul}\nTanggal Pinjam ${dataPinjam.tanggalPinjam}\nTanggal Kembali${dataPinjam.tanggalKembali}"),
+            subtitle:  Text("Buku : ${dataPinjam.book?.judul}\nTanggal Pinjam : ${dataPinjam.tanggalPinjam}\nTanggal Kembali : ${dataPinjam.tanggalKembali}\nStatus : ${dataPinjam.status}"),
+            trailing: Text("${dataPinjam.status}")
           );
         },
         separatorBuilder: (context, index)=> Divider(),
